@@ -21,7 +21,7 @@ const SphereArea = () => {
   }
 
   return (
-    <div>
+    <div className="pages">
       <Row>
         <Col lg="6">
           <h3>Find area of a sphere</h3>
@@ -33,7 +33,7 @@ const SphereArea = () => {
               </Form.Group>
             </Col>
             <Col md={{ span: 5, offset: 1 }} xs={{ span: 1, offset: 4 }} >
-              <Button onClick={calculate} variant="primary">Calculate</Button>
+              <Button className="calculators" onClick={calculate} variant="primary">Calculate</Button>
             </Col>
           </Row>
         </Col>

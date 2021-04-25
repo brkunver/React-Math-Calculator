@@ -22,7 +22,7 @@ const Hypotenuse = () => {
   }
 
   return (
-    <div>
+    <div className="pages">
       <Row>
         <Col lg="6">
           <h3>Find Hypotenuse</h3>
@@ -39,7 +39,7 @@ const Hypotenuse = () => {
               </Form.Group>
             </Col>
             <Col md={{ span: 3, offset: 1 }} xs={{ span: 1, offset: 4 }} >
-              <Button onClick={calculate} variant="primary">Calculate</Button>
+              <Button className="calculators" onClick={calculate} variant="primary">Calculate</Button>
             </Col>
           </Row>
         </Col>

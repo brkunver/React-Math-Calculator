@@ -21,9 +21,9 @@ const CircleArea = () => {
   }
 
   return (
-    <div>
+    <div className="pages">
       <Row>
-        <Col lg="6">
+        <Col lg="6" >
           <h3>Find area of a circle</h3>
           <Alert variant={alertColor}>{alert}</Alert>
           <Row>
@@ -33,7 +33,7 @@ const CircleArea = () => {
               </Form.Group>
             </Col>
             <Col md={{ span: 5, offset: 1 }} xs={{ span: 1, offset: 4 }} >
-              <Button onClick={calculate} variant="primary">Calculate</Button>
+              <Button className="calculators" onClick={calculate} variant="primary">Calculate</Button>
             </Col>
           </Row>
         </Col>

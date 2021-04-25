@@ -3,16 +3,18 @@ import Hypotenuse from './pages/Hypotenuse';
 import CircleArea from './pages/CircleArea';
 import SphereArea from './pages/SphereArea';
 import Home from './pages/Home';
+import BrandBar from './components/BrandBar';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
+import './App.css'
 
 function App() {
   return (
     <Router>
+      <BrandBar/>
       <Container>
         <Switch>
           <Route path="/hypotenuse">

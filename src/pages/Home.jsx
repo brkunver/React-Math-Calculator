@@ -3,9 +3,9 @@ import { Row, Col, Jumbotron } from 'react-bootstrap';
 import SideMenu from '../components/SideMenu';
 const Home = () => {
   return (
-    <div>
+    <div className="pages">
       <Row>
-        <Col lg="6">
+        <Col lg="6" className="calculators">
           <Jumbotron>
             <h2>Welcome to the Math Road</h2>
             <p> Pick a Calculator From Side Menu </p>
