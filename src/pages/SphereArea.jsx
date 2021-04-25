@@ -1,0 +1,46 @@
+import React from 'react';
+import SideMenu from '../components/SideMenu';
+import { Row, Col, Alert, Form, Button } from "react-bootstrap";
+import { useState } from "react"
+
+const SphereArea = () => {
+  const [radius, setradius] = useState(null)
+  const [alert, setalert] = useState("Please Enter radius of a sphere")
+  const [alertColor, setalertColor] = useState("info")
+
+  let calculate = () => {
+    if (radius == null || radius <= 0) {
+      setalert("Please enter valid value")
+      setalertColor("warning")
+    }
+    else {
+      let area = 4 * Math.PI * Math.pow(radius , 2)
+      setalert(`Surface area is ${area}`)
+      setalertColor("success")
+    }
+  }
+
+  return (
+    <div>
+      <Row>
+        <Col lg="6">
+          <h3>Find area of a sphere</h3>
+          <Alert variant={alertColor}>{alert}</Alert>
+          <Row>
+            <Col md={{ span: 5, offset: 1 }} >
+              <Form.Group >
+                <Form.Control onChange={(e) => setradius(e.target.value)} type="number" placeholder="Radius" />
+              </Form.Group>
+            </Col>
+            <Col md={{ span: 5, offset: 1 }} xs={{ span: 1, offset: 4 }} >
+              <Button onClick={calculate} variant="primary">Calculate</Button>
+            </Col>
+          </Row>
+        </Col>
+        <Col lg="4"><SideMenu /></Col>
+      </Row>
+    </div>
+  )
+}
+
+export default SphereArea;
